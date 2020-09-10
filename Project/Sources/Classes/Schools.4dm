@@ -4,6 +4,7 @@ Class extends DataClass
 Function registerStudent
 	C_OBJECT:C1216($1;$data;$student;$school;$result;$0)
 	$data:=$1
+	
 	$school:=This:C1470.query("name = :1";$data.schoolName).first()
 	$result:=New object:C1471("success";True:C214)
 	If ($data.englishLevel<$school.minAcceptedEnglishLevel)
